@@ -8,20 +8,20 @@ import type { ErrorResponse as _grpc_reflection_v1alpha_ErrorResponse, ErrorResp
 
 export interface ServerReflectionResponse {
   'validHost'?: (string);
-  'originalRequest'?: (_grpc_reflection_v1alpha_ServerReflectionRequest);
-  'fileDescriptorResponse'?: (_grpc_reflection_v1alpha_FileDescriptorResponse);
-  'allExtensionNumbersResponse'?: (_grpc_reflection_v1alpha_ExtensionNumberResponse);
-  'listServicesResponse'?: (_grpc_reflection_v1alpha_ListServiceResponse);
-  'errorResponse'?: (_grpc_reflection_v1alpha_ErrorResponse);
+  'originalRequest'?: (_grpc_reflection_v1alpha_ServerReflectionRequest | null);
+  'fileDescriptorResponse'?: (_grpc_reflection_v1alpha_FileDescriptorResponse | null);
+  'allExtensionNumbersResponse'?: (_grpc_reflection_v1alpha_ExtensionNumberResponse | null);
+  'listServicesResponse'?: (_grpc_reflection_v1alpha_ListServiceResponse | null);
+  'errorResponse'?: (_grpc_reflection_v1alpha_ErrorResponse | null);
   'messageResponse'?: "fileDescriptorResponse"|"allExtensionNumbersResponse"|"listServicesResponse"|"errorResponse";
 }
 
 export interface ServerReflectionResponse__Output {
   'validHost': (string);
-  'originalRequest'?: (_grpc_reflection_v1alpha_ServerReflectionRequest__Output);
-  'fileDescriptorResponse'?: (_grpc_reflection_v1alpha_FileDescriptorResponse__Output);
-  'allExtensionNumbersResponse'?: (_grpc_reflection_v1alpha_ExtensionNumberResponse__Output);
-  'listServicesResponse'?: (_grpc_reflection_v1alpha_ListServiceResponse__Output);
-  'errorResponse'?: (_grpc_reflection_v1alpha_ErrorResponse__Output);
+  'originalRequest': (_grpc_reflection_v1alpha_ServerReflectionRequest__Output | null);
+  'fileDescriptorResponse'?: (_grpc_reflection_v1alpha_FileDescriptorResponse__Output | null);
+  'allExtensionNumbersResponse'?: (_grpc_reflection_v1alpha_ExtensionNumberResponse__Output | null);
+  'listServicesResponse'?: (_grpc_reflection_v1alpha_ListServiceResponse__Output | null);
+  'errorResponse'?: (_grpc_reflection_v1alpha_ErrorResponse__Output | null);
   'messageResponse': "fileDescriptorResponse"|"allExtensionNumbersResponse"|"listServicesResponse"|"errorResponse";
 }

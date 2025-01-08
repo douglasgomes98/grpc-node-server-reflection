@@ -6,7 +6,7 @@ export interface ServerReflectionRequest {
   'host'?: (string);
   'fileByFilename'?: (string);
   'fileContainingSymbol'?: (string);
-  'fileContainingExtension'?: (_grpc_reflection_v1alpha_ExtensionRequest);
+  'fileContainingExtension'?: (_grpc_reflection_v1alpha_ExtensionRequest | null);
   'allExtensionNumbersOfType'?: (string);
   'listServices'?: (string);
   'messageRequest'?: "fileByFilename"|"fileContainingSymbol"|"fileContainingExtension"|"allExtensionNumbersOfType"|"listServices";
@@ -16,7 +16,7 @@ export interface ServerReflectionRequest__Output {
   'host': (string);
   'fileByFilename'?: (string);
   'fileContainingSymbol'?: (string);
-  'fileContainingExtension'?: (_grpc_reflection_v1alpha_ExtensionRequest__Output);
+  'fileContainingExtension'?: (_grpc_reflection_v1alpha_ExtensionRequest__Output | null);
   'allExtensionNumbersOfType'?: (string);
   'listServices'?: (string);
   'messageRequest': "fileByFilename"|"fileContainingSymbol"|"fileContainingExtension"|"allExtensionNumbersOfType"|"listServices";
