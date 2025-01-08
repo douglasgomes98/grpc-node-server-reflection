@@ -18,24 +18,23 @@
     "src",
     "proto"
   ],
-  "dependencies": {
-    "@grpc/grpc-js": "^1.2.8",
-    "@grpc/proto-loader": "^0.6.0-pre17",
-    "google-protobuf": "^3.15.1"
-  },
   "scripts": {
     "postinstall": "npm run generate:proto-types",
     "generate:proto-types": "proto-loader-gen-types --longs=String --enums=String --defaults --oneofs --grpcLib=@grpc/grpc-js --outDir=./src/generated ./proto/grpc/reflection/v1alpha/reflection.proto",
-    "build-cjs": "tsc --allowJs --outDir cjs --noEmit false --module CommonJS",
-    "build-esm": "tsc --allowJs --outDir esm --noEmit false --moduleResolution node --module ES2015",
-    "build-types": "tsc --declaration --declarationMap --isolatedModules false --outDir types --emitDeclarationOnly --noEmit false",
+    "build-cjs": "./node_modules/typescript/bin/tsc --allowJs --outDir cjs --noEmit false --module CommonJS",
+    "build-esm": "./node_modules/typescript/bin/tsc --allowJs --outDir esm --noEmit false --moduleResolution node --module ES2015",
+    "build-types": "./node_modules/typescript/bin/tsc --declaration --declarationMap --isolatedModules false --outDir types --emitDeclarationOnly --noEmit false",
     "build": "concurrently \"npm run build-cjs\" \"npm run build-esm\" \"npm run build-types\"",
     "prepublishOnly": "npm run build"
   },
+  "dependencies": {
+    "@grpc/grpc-js": "^1.12.5",
+    "@grpc/proto-loader": "^0.7.13",
+    "google-protobuf": "^3.21.4"
+  },
   "devDependencies": {
-    "@types/google-protobuf": "^3.7.4",
-    "concurrently": "^6.2.0",
-    "tsc": "^1.20150623.0",
-    "typescript": "^4.1.5"
+    "@types/google-protobuf": "^3.15.12",
+    "concurrently": "^9.1.2",
+    "typescript": "^5.7.3"
   }
 }
